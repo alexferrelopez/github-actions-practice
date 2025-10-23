@@ -12,7 +12,7 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements/test_requirements.txt
           pip install pytest
-          pytest -q test/
+          pytest -q
   py27:
     runs-on: ubuntu-latest
     container: python:2.7-slim
@@ -23,4 +23,4 @@ jobs:
           python -m pip install -U "pip==20.3.4" "setuptools<45" "wheel<1.0"
           pip install "pytest<5"
           pip install -r requirements/test_requirements.txt || true
-          pytest -q test/
+          pytest -q
